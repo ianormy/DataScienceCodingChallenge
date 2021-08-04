@@ -5,8 +5,10 @@
 def get_numeric_column_names():
     """Returns the numeric column names in the data
 
-    :return numeric_cols: list of numeric column names
-    :rtype: list
+    Returns
+    -------
+    numeric_cols : list
+        List of column names for the numeric fields.
     """
     numeric_cols = ['q_OpeningDays',
                     'q_OpeningHours',
@@ -20,6 +22,13 @@ def get_numeric_column_names():
 
 
 def get_highly_correlated_column_names():
+    """Returns the highly correlated column names in the data
+
+    Returns
+    -------
+    highly_correlated_cols : list
+        List of column names for the highly correlated columns.
+    """
     highly_correlated_cols = ['q_2017 HHs: 5th Quintile (68.759 and above)',
                               'q_2017 Total Population',
                               'q_2017 Pop 15+/Edu: University, Fachhochschule',
