@@ -53,6 +53,8 @@ def preprocess_dataset(input_data: pd.DataFrame):
 
 
 def main():
+    """Parse the parameters from the command line and do the data processing.
+    """
     parser = argparse.ArgumentParser(description='Preprocess data')
     parser.add_argument('Path', metavar='path', type=str, help='the path to the data')
     args = parser.parse_args()

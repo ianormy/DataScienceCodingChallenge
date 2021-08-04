@@ -1,6 +1,4 @@
-"""**The Machine Learning Development**
-
-----
+"""Train a Random Forest model using the input data.
 """
 import os
 import argparse
@@ -16,8 +14,10 @@ from data_processing import preprocess_dataset
 def train(input_path):
     """Train our model using the input data
 
-    Args:
-        input_path(str): path to the file with the data.
+    Parameters
+    ----------
+    input_path : str
+        Path to the data file.
     """
     logging.info(f'Loading data in {input_path}')
     df = pd.read_csv(input_path, index_col='fakeID')
@@ -46,11 +46,7 @@ def train(input_path):
 
 
 def main():
-    """
-    The ML training steps, including:
-        * x
-        * x
-        * x
+    """Parse the parameters from the command line and do the training
     """
     logging.basicConfig(format='%(asctime)s %(levelname)s %(message)s', level=logging.INFO)
     parser = argparse.ArgumentParser(description='Train a Random Forest Classifier')
